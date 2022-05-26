@@ -1,0 +1,40 @@
+// sections
+@import "intro";
+@import "appeal";
+@import "latest-news";
+@import "important-news";
+@import "our-library";
+@import "video-content";
+@import "feedback";
+
+
+.content {
+    &__intro {
+
+    }
+
+    &__appeal {
+        margin-top: 30px;
+    }
+    
+    &__latest-news {
+        margin-top: 30px;
+    }
+
+    &__important-news {
+        margin-top: 30px;
+    }
+
+    &__our-library {
+        margin-top: 30px;
+    }
+
+    &__video-content {
+        margin-top: 30px;
+    }
+
+    &__feedback {
+        margin-bottom: 75px;
+        margin-top: 30px;
+    }
+}

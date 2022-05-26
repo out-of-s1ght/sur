@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="module" src="js/app.mjs"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        @@include("header.html")
+        <main class="content">
+            <section class="intro content__intro">
+                <div class="intro__container container">
+                    <h2 class="intro__heading large-heading">российский профсоюз моряков является национальным
+                        профсоюзом моряков россии и составной частью мфт с 1993 года</h2>
+                    <a class="intro__button button button_fill">Узнать больше</a>
+                </div>
+                <div class="intro__bg">
+                    <img src="img/main/ship.png" alt="">
+                </div>
+            </section>
+            <section class="appeal content__appeal">
+                <div class="container appeal__container">
+                    <h3 class="big-heading appeal__heading">Уважаемые посетители!</h3>
+                    <div class="appeal__body">
+                        <figure class="quote appeal__quote">
+                            <blockquote class="quote__text text text_size_m">В длительных рейсах моряки, работающие на
+                                судах под иностранными и российскими флагами, часто обмениваются между собой мнениями по
+                                вопросам, а зачем вообще нужен им профсоюз и какие функции он выполняет. Дальневосточная
+                                региональная организация Российского профсоюза моряков оказывет помощь по значительному
+                                спектру вопросов труженикам флота в различных жизненных ситуациях, как в океане, так и
+                                на берегу.</blockquote>
+                            <figcaption><cite class="quote__author">— Николай Михайлович Суханкин, председатель
+                                    ДВОРПСМ</cite></figcaption>
+                        </figure>
+                        <div class="appeal__photo">
+                            <img src="img/main/Rectangle.png" alt="">
+                        </div>
+                    </div>
+                    <img class="appeal__bg" src="img/main/bg.svg" alt="">
+                </div>
+            </section>
+            <section class="latest-news content__latest-news">
+                <div class="container latest-news__container">
+                    <div class="heading-with-icon latest-news__heading">
+                        <img src="img/icon-newspaper.svg" alt="" class="heading-with-icon__image">
+                        <h3 class="heading-with-icon__text">Последние новости</h3>
+                    </div>
+                    <div class="slider latest-news__slider">
+                        <ul class="slider__items">
+                            @@for (var i = 0; i < 5; i++) { <li class="slider__item">
+                                <a class="slide__item-link" href="">
+                                    @@include("home-page/latest-news-card.html", {
+                                    "heading": "Волжское пароходство расширяет производственно-техническую базу УТЦ",
+                                    "text": "АО «Судоходная компания «Волжское пароходство» расширило производственно-техническую базу Учебно-тренажерного центра морской подготовки: в эксплуатацию введен современный тренажер SRV для подготовки специалистов по спасательным, дежурным и скоростным дежурным шлюпкам – он дополняет существующую программу подготовки по шлюпкам и плотам, значит... ",
+                                    "link": "/",
+                                    "date": "18.05.22"
+                                    })
+                                </a>
+                                </li>
+                                }
+                        </ul>
+                        <div class="slider__indicators">
+                            <div class="slider__indicator"></div>
+                            <div class="slider__indicator"></div>
+                            <div class="slider__indicator"></div>
+                            <div class="slider__indicator"></div>
+                            <div class="slider__indicator"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="important-news content__important-news">
+                <div class="container important-news__container">
+                    <h3 class="big-heading important-news__heading">Важно</h3>
+                    <div class="important-news-cards important-news__cards">
+                        <ul class="important-news-cards__items">
+                            @@for (var i = 0; i < 4; i++) { <li class="important-news-cards__item">
+                                <a class="important-news-cards__item-link" href="/">
+                                    @@include("home-page/important-news-card.html", {"heading": "Предложения оформить карту иностранного банка – новый козырь мошенников", "date": "17.05.22", "text": "В условиях санкций, мошенники стали выманивать деньги у россиян, обещая оформить карту Visa или MasterCard иностранного банка или под предлогом дефицита валюты, предлагая перевести средства на «особый счет»"})
+                                </a>
+                                </li>
+                                }
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="our-library content__our-library">
+                <div class="container our-library__container">
+                    <div class="heading-with-icon our-library__heading">
+                        <img src="img/icon-book.svg" alt="" class="heading-with-icon__image">
+                        <h3 class="heading-with-icon__text">Наша библиотека</h3>
+                    </div>
+                    <div class="library-hero our-library__hero">
+                        <img src="img/library-hero.png" alt="" class="library-hero__image">
+                        <div class="library-hero__body">
+                            <h2 class="large-heading library-hero__heading">Lorem ipsum dolor sit amet, consectetur
+                                adipiscing</h2>
+                            <p class="text text_size_m library-hero__text">Ut enim ad minim veniam, quis nostrud
+                                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                                dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                                mollit anim id est laborum.</p>
+                            <a href="/" class="button button_stroke library-hero__button">Выбрать книгу</a>
+                        </div>
+                    </div>
+                    <div class="library-recommended">
+                        <h4 class="tiny-heading library-recommended__heading">Рекомендуемые</h4>
+                        <ul class="library-recommended__items">
+                            @@for (var i = 0; i < 4; i++) { <li class="library-recommended__item">
+                                <a href="/" class="library-recommended__item-link">
+                                    @@include("home-page/recommended-book-card.html", {"heading": "Lorem Ipsum", "text": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat"})
+                                </a>
+                                </li>
+                                }
+                        </ul>
+                    </div>
+                    <img src="img/wheel-grey.svg" alt="" class="our-library__bg">
+                </div>
+            </section>
+            <section class="video-content content__video-library">
+                <div class="video-content__container">
+                    <div class="video-content__header">
+                        <h2 class="large-heading video-content__heading">Duis aute irure dolor in reprehenderit in voluptate</h2>
+                        <a href="" class="watch-button video-content__button">
+                            <div class="watch-button__secret">
+                                <span class="watch-button__secret-text">На нашем сайте</span>
+                                <img src="img/icon-play.svg" alt="" class="watch-button__icon">
+                            </div>
+                            <span class="watch-button__text">Смотреть онлайн</span>
+                        </a>
+                    </div>
+                    <div class="video-cards video-content__cards">
+                        <ul class="video-cards__items">
+                            @@for (var i = 0; i < 3; i++) { <li class="video-cards__item">
+                                <a href="/" class="video-cards__item-link">
+                                    @@include("home-page/video-card.html", {"length": "24:58", "heading": "Lorem ipsum dolor sit amet, consectetur adipiscing elit"})
+                                </a>
+                                </li>
+                                }
+                        </ul>
+                    </div>
+                    <div class="video-content__bg-cover"></div>
+                    <img class="video-content__bg" src="img/video-content-bg.png" alt="">
+                </div>
+            </section>
+            <section class="feedback content__feedback">                
+                <div class="feedback__container container">
+                    <h2 class="big-heading feedback__heading">Свяжитесь с нами</h2>
+                    <div class="feedback__body">
+                        <form action="" class="feedback__form">
+                            <input class="input feedback__input" placeholder="Ваше имя" type="text">
+                            <input class="input feedback__input" placeholder="Электронная почта" type="text">
+                            <input class="input feedback__input" placeholder="Номер телефона" type="text">
+                            <textarea class="textarea feedback__textarea" placeholder="Сообщение" name="" id="" cols="30" rows="10"></textarea>
+                            <button class="button button_fill" type="submit">Отправить</button>
+                        </form>
+                        <div class="feedback__contacts">
+                            <ul class="feedback__contacts-items">
+                                <li class = "feedback__contacts-item">
+                                    <a class="contact-link" href="/">
+                                        <img src="img/icons/icon-vk.svg" alt="" class="contact-link__icon">
+                                        <span class="contact-link__text text text_size_m">Группа ВКонтакте</span>
+                                    </a>
+                                </li>
+                                <li class="feedback__contacts-item">
+                                    <a class="contact-link" href="/">
+                                        <img src="img/icons/icon-mail.svg" alt="" class="contact-link__icon">
+                                        <span class="contact-link__text  text text_size_m">username@mail.ru</span>
+                                    </a>    
+                                </li>
+                                <li class="feedback__contacts-item">
+                                    <a class="contact-link" href="/">
+                                        <img src="img/icons/icon-phone.svg" alt="" class="contact-link__icon">
+                                        <span class="contact-link__text  text text_size_m">+7 (999) 998 00-00</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include("footer.html")
+    </div>
+    <div class="back-to-top">
+        <img src="img/icons/chevron-up.svg" alt="">
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

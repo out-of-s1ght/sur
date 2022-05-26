@@ -1,0 +1,66 @@
+.feedback {
+	//display: flex;
+	//justify-content: stretch;
+
+	&__container {
+		background: #ffffff;
+		box-shadow: 0px 15px 50px rgba(0, 0, 0, 0.25);
+		border-radius: 20px;
+		max-width: 900px;
+		padding: 30px;
+		@media (max-width: 900px) {
+			margin: 0 20px;
+		}
+	}
+
+	&__heading {
+		text-align: center;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__body {
+		width: 100%;
+
+		@media (min-width: 630px) {
+			display: flex;
+			
+		}
+
+		@media (max-width: 630px) {
+			.feedback__contacts{
+				display: none;
+			}
+		}
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		max-width: 500px;
+		:not(:last-child) {
+			margin: 0px 0px 20px 0px;
+		}
+		flex-grow: 1;
+	}
+	&__input {
+	}
+	&__textarea {
+	}
+	&__contacts {
+		margin-left: 30px;
+	}
+	&__contacts-items {
+		border-left: 1px solid #c7c7c7;
+		padding-left: 30px;
+	}
+	&__contacts-item {
+		display: flex;
+		align-items: center;
+		& + & {
+			margin-top: 20px;
+		}
+	}
+	&__contacts-item-link {
+		margin-left: 20px;
+	}
+}

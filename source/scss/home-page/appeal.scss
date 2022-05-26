@@ -1,0 +1,63 @@
+.appeal {
+	position: relative;
+    
+    margin: 0px 0px 50px 0px;
+
+    &__heading {
+        color: #3b518a;
+        margin-bottom: 100px;
+
+        @media (max-width: 900px) {
+            margin: 0px 0px 30px 0px;
+            
+            text-align: center;
+        }
+    }
+
+    &__body {
+        display: grid;
+        @media (min-width: 900px) {
+		    grid-template-columns: 3fr 1fr;
+		}
+		@media (max-width: 900px) {
+            justify-items: center;
+		}
+
+		column-gap: 20px;
+    }
+
+    &__quote {
+        max-width: 650px;
+
+        @media (max-width: 900px) {
+            grid-row: 2/3;
+        }
+    }
+
+    &__photo {
+		@media (max-width: 900px) {
+            grid-row: 1/2;
+            
+            margin: 0px 0px 30px 0px;
+		}
+		img {
+			//width: 100%;
+            
+            width: 100%;
+            max-width: 250px;
+
+			object-fit: cover;
+
+            border-radius: 10px;
+		}
+    }
+
+	&__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: -2;
+		width: 45%;
+		transform: translate(35%, -15%);
+	}
+}

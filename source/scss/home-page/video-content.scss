@@ -1,0 +1,201 @@
+.video-card {
+    position: relative;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    
+    background-color: #f5f5f5;
+    border-radius: 10px;
+
+    transition: transform .25s ease-out;
+
+    &__length {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+
+        display: inline-block;
+        padding: 3px;
+
+        font-size: 12px;
+        font-weight: 500;
+        color: #f5f5f5;
+
+        background: rgba(0, 0, 0, 0.58);
+        border-radius: 5px;
+    }
+
+    &__preview {
+        width: 230px;
+        height: 140px;
+        object-fit: cover;
+    }
+
+    &__heading {
+        padding: 10px 15px;
+        max-width: 230px;
+
+        font-weight: 400;
+        font-size: 14px;
+        color: #2E2E2E;    
+        
+        text-align: center;
+    }
+
+    @media (min-width: 1000px) {
+        &:hover {
+            transform: translateX(-15px);
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &:hover {
+            transform: translateY(-15px);
+        }
+    }
+
+    @media (max-width: 850px) {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.video-cards {
+    @media (min-width: 1000px) {
+        &__items {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        &__item + &__item {
+            margin-top: 30px;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        &__items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            grid-column-gap: 30px;
+            grid-row-gap: 30px;
+            justify-items: center;
+            width: 100%
+        }
+    }
+}
+
+.video-content {
+    @media (min-width: 1000px) {
+        margin: 30px 20px;
+        &__container {
+            border-radius: 15px;
+        }
+    }
+    &__container {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+        max-width: 1240px;
+        margin: 0 auto;
+        
+        overflow: hidden;
+    }
+
+    &__heading {
+        max-width: 420px;
+        color: #f5f5f5;
+        text-align: center;
+    }
+
+    &__button {
+        margin-top: 30px;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px;
+
+        background: rgba(26, 26, 26, 0.7);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+
+    &__cards {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            display: block;
+
+            right: 0;
+            top: 0;
+            width: 170px;
+            height: 100%;
+            
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -2;
+        object-fit: cover;
+        
+        @media (max-width: 1000px) {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__bg-cover {
+        display: none;
+    }
+
+    @media (max-width: 1000px) {
+        &__container {
+            flex-direction: column;
+        }
+        &__bg-cover {
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+            
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            background: rgba(26, 26, 26, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        &__header {
+            background: none;
+            backdrop-filter: none;
+            -webkit-backdrop-filter: none;
+        }
+        &__cards {
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

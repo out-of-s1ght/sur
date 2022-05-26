@@ -1,0 +1,31 @@
+@import "reset";
+
+html {
+    //overflow: visible;
+}
+
+body {
+    //overflow-y: hidden;
+    font-family: Montserrat, sans-serif;
+}
+
+.wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 1240px;
+}
+
+._lock {
+    overflow: hidden;
+}
+
+// common styles
+@import "common/style";
+
+// pages
+@import "home-page/style";
