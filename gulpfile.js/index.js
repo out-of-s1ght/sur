@@ -73,7 +73,7 @@ const watch = () => {
     const _watch = (path, task) => gulp.watch(path, { delay: 500 }, task)
     const reload = done => done(bs.reload())
     
-    bs.init({server: "./public"})
+    bs.init({server: "./public", host: "192.168.0.32"})
 
     _watch(path.watch.markup, series(cleanMarkup, buildMarkup, reload))
     _watch(path.watch.styles, series(cleanStyles, buildStyles, reload))
