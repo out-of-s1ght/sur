@@ -29,6 +29,47 @@ function moveContentToFitHeader() {
 	window.addEventListener("resize", _resize)
 }
 
+function doAnimations() {
+	gsap.registerPlugin(ScrollTrigger);
+	let a = gsap.fromTo(".appeal__photo", { scale: "0" }, { // selector text, Array, or object
+		scale: "1", // any properties (not limited to CSS)
+		duration: 1.8, // seconds		delay: 0,
+		ease: "power2.inOut",
+		scrollTrigger: {
+			trigger: ".appeal__photo",
+			toggleActions: "play reverse play reverse",
+		}
+	}
+	)
+	gsap.fromTo(".intro__body", { x: "200%", scale: "0" }, { // selector text, Array, or object
+		x: "0%", // any properties (not limited to CSS)
+		scale: "1",
+		duration: 1.8,
+		delay: 0.1,
+		ease: "power2.inOut",
+		scrollTrigger: {
+			trigger: ".intro__body",
+
+			toggleActions: "play reverse play reverse",
+		}
+	}
+	)
+	gsap.fromTo(".video-card", { x: "200%" }, { 
+		x: "0%", 
+		duration: 0.6,
+		stagger: 0.2,
+		delay: 0.6,
+		ease: "power2.inOut",
+		scrollTrigger: {
+			trigger: ".video-content",
+			// start: "top center",
+			toggleActions: "play reverse play reverse",
+		}
+	}
+	)
+}
+
+doAnimations()
 initBackToTopButton()
 moveContentToFitHeader()
 

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include("header.html")
+		<main class="content">
+			<section class="contacts">
+				<div class="contacts__container container">
+					<div class="contacts__items">
+						<div class="contacts__item contacts__item_our">
+							<h2 class="contacts__title heading big-heading">Наши контакты</h2>
+							<p class="contacts__text text text_size_s">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+							</p>
+							<ul class="contacts__list">
+								<li class="contacts__list-item">
+									<a href="tel:+7(999) 999 09-09" class="contacts__link contacts__link_tel">Номер телефона</a>
+									<a href="tel:+7(999) 999 09-09" class="contacts__link-text text text_size_s">+7(999) 999 09-09</a>
+								</li>
+								<li class="contacts__list-item">
+									<a href="mailto:dvsur@mail.ru" class="contacts__link contacts__link_mail">Электронная почта</a>
+									<a href="mailto:dvsur@mail.ru" class="contacts__link-text text text_size_s">username@mail.ru</a>
+								</li>
+								<li class="contacts__list-item">
+									<a href="mailto:vk.com/dvsur" class="contacts__link contacts__link_vk">Группа вконтакте</a>
+									<a href="mailto:vk.com/dvsur" class="contacts__link-text text text_size_s">vk.com/username</a>
+								</li>
+							</ul>
+						</div>
+						<div class="contacts__item contacts__item_map">
+							<h3 class="contacts__title-map">мы на карте</h3>
+							<div class="contacts__our-location">
+								<iframe сlass="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2926.958173666848!2d132.8692773156703!3d42.81036991453633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5fb13fa55fa93eef%3A0xe1930bff83504a76!2z0YPQuy4g0JvQtdC90LjQvdGB0LrQsNGPLCAyLCDQndCw0YXQvtC00LrQsCwg0J_RgNC40LzQvtGA0YHQutC40Lkg0LrRgNCw0LksIDY5MjkxNg!5e0!3m2!1sru!2sru!4v1654057791150!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<img class="contacts__bg" src="img/main/bg.svg" alt="">
+			</section>
+		</main>
+		@@include("footer.html")
+	</div>
+	<div class="back-to-top">
+		<img src="img/icons/chevron-up.svg" alt="">
+	</div>
+	@@include('scripts.html')
+</body>
+
+</html>

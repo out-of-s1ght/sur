@@ -237,7 +237,8 @@
     }
 }
 
-.input, .textarea {
+.input,
+.textarea {
     background: #f5f5f5;
     border: 1px solid rgba(0, 0, 0, 0.05);
     border-radius: 5px;
@@ -264,5 +265,42 @@
 
     &__text {
         margin-left: 20px;
+    }
+}
+
+.small-button {
+    display: inline-block;
+    padding: 10px 35px;
+    font-weight: 600;
+    font-size: 14px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    &_stroke {
+        color: #3b518a;
+        border: 1px solid #3b518a;
+        border-radius: 10px;
+
+        transition: color 0.25s ease-out, background-color 0.25s ease-out;
+
+        &:hover {
+            color: #f5f5f5;
+            background-color: #3b518a;
+        }
+    }
+
+    &_fill {
+        color: #f5f5f5;
+        background: #6b9eff;
+        border: 2px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+
+        transition: transform 0.25s ease-out;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 }

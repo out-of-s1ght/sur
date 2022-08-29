@@ -1,4 +1,4 @@
-@import "reset";
+@import "!reset";
 
 html {
     //overflow: visible;
@@ -10,13 +10,22 @@ body {
 }
 
 .wrapper {
+    display: flex;
+    flex-direction: column;
+    //justify-content: space-between;
+    min-height: 100vh;
     overflow: hidden;
     position: relative;
+    
+}
+
+.content {
+    flex: 1 1 100%;
 }
 
 .container {
     margin: 0 auto;
-    padding: 15px;
+    padding: 10px 15px;
     max-width: 1240px;
 }
 
@@ -29,3 +38,7 @@ body {
 
 // pages
 @import "home-page/style";
+
+//contacts
+@import "contacts/style.scss"
+
